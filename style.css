@@ -1,5 +1,6 @@
 :root {
   --main-color: #005DD9;
+  background: #2e384e;
 }
 
 * {
@@ -18,19 +19,20 @@ body {
 }
 
 .container {
-  width: 306px;
+  width: 360px;
   padding: 20px 10px;
   border-radius: 10px;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2),
-    -5px -5px 10px rgba(0, 0, 0, 0.2)
+  /*box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2),
+    -5px -5px 10px rgba(0, 0, 0, 0.2)*/
 }
 
 .output {
-  border: solid 2px var(--main-color);
+  /*border: solid 2px var(--main-color);*/
   height: 60px;
-  border-radius: 20px;
+  border-radius: 5rem;
   overflow: hidden;
   margin-bottom: 20px;
+  
 }
 
 .output input {
@@ -38,40 +40,49 @@ body {
   width: 100%;
   border: none;
   outline: none;
-  font-size: 50px;
+  font-size: 30px;
   text-align: end;
   padding-right: 20px;
-  color: var(--main-color);
+  color: white;
+  outline: none;
+  background: #586c96 ;
+  font-weight: 350;
+  letter-spacing: 2px;
 }
 
 .output input::placeholder {
-  color: var(--main-color);
+  color: white;
+  opacity: 0.6;
 }
 
 .btns {
   display: grid;
   grid-template-columns: repeat(4, 60px);
-  gap: 10px 15px;
+  gap: 25px 30px;
 }
 
 .btns button {
   border: none;
   outline: none;
-  height: 60px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
   font-size: 25px;
   color: var(--main-color);
   background-color: #fff;
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2)
 }
 
+.btns button:hover{
+    background: #131726;
+    color: white;
+}
 .btns button.sp {
   background-color: var(--main-color);
   color: #fff;
 }
 
 .btns button.equal {
-  width: 135px;
+  width: 155px;
   border-radius: 22px;
 }
 
@@ -100,14 +111,14 @@ body {
 
 .menu {
   padding: 10px;
-  border-radius: 10px;
-  background-color: #fff;
+  border-radius: 3rem;
+  background-color:#0e121b;
   display: flex;
   gap: 10px;
   transform: scale(0);
   transform-origin: top left;
   transition: 0.3s;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  /*box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.9);*/
 }
 
 .menu.open {
@@ -118,7 +129,6 @@ body {
   height: 40px;
   width: 40px;
   border-radius: 50%;
-  border: solid 2px #818181;
 }
 
 .menu div:nth-child(1) {
